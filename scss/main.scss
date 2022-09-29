@@ -1,0 +1,366 @@
+@import "config";
+@import "utilities";
+@import "item_grid";
+//General styles
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Dosis", sans-serif;
+  line-height: 1.6;
+  background: $back-color;
+  color: $light-color;
+}
+a {
+  text-decoration: none;
+}
+ul {
+  list-style: none;
+}
+
+h2,
+h3,
+h4 {
+  text-transform: uppercase;
+}
+
+img {
+  width: 100%;
+}
+
+//main-nav
+#main-nav {
+  display: flex;
+
+  justify-content: space-between;
+}
+ul {
+  display: flex;
+}
+li {
+  padding: 1rem 1.5rem;
+}
+a {
+  text-decoration: none;
+  color: $light-color;
+  text-transform: uppercase;
+  border-bottom: 3px transparent solid;
+  transition: border-color 0.5s;
+
+  &:hover {
+    border-color: $grey-color;
+  }
+  &.current-page {
+    border-color: $main-color;
+  }
+}
+
+//logo
+#logo {
+  padding-top: 1rem 1.5rem;
+  width: 70px;
+  height: 70px;
+  color: white;
+  text-transform: uppercase;
+}
+
+//header
+.header-content {
+  text-align: center;
+  padding-top: 15%;
+
+  h1,
+  span {
+    color: $light-color;
+    font-size: 4rem;
+    line-height: 1.2;
+  }
+  .main {
+    color: $main-color;
+  }
+
+  .dotted {
+    padding-left: 3rem;
+    padding-right: 3rem;
+    border-left: $main-color 10px dotted;
+    border-right: $main-color 10px dotted;
+  }
+}
+.lead {
+  padding-top: 3rem;
+  text-align: center;
+  color: $grey-color;
+}
+
+//About
+//about a
+#about {
+  &-a {
+    text-align: left;
+
+    .header-1 {
+      margin-top: 3rem;
+    }
+    .header-2 {
+      margin-top: 2rem;
+      h2 {
+        text-transform: none;
+        span {
+          color: $main-color !important;
+        }
+      }
+    }
+    .text {
+      margin-top: 2rem;
+      color: $grey-color;
+    }
+  }
+}
+//about b
+#about {
+  &-b {
+    .about-info {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-gap: 1.2rem;
+
+      .info-1,
+      .info-2 {
+        border-left: 3px solid $main-color;
+        padding: 0.8rem;
+
+        p {
+          font-size: 1.5rem;
+          padding-top: 1rem;
+          padding-bottom: 1rem;
+          border-bottom: 3px #333 dotted;
+        }
+      }
+      .info-2 {
+        margin-left: 2rem;
+      }
+    }
+  }
+}
+
+//about c
+#about {
+  &-c {
+    .progress {
+      overflow: hidden;
+      height: 20px;
+      background: $grey-color;
+      border-radius: 5px;
+      margin-bottom: 0.6rem;
+
+      div {
+        height: 100%;
+        color: white;
+        text-align: center;
+        background: $main-color;
+      }
+    }
+    h2 {
+      text-align: center;
+      font-size: 2rem;
+    }
+    border: 2px $main-color solid;
+    border-right: none;
+    border-left: none;
+    padding-bottom: 3rem;
+    padding-top: 2rem;
+  }
+}
+
+//about-d
+#about {
+  &-d {
+    .d-grid {
+      margin-top: 5rem;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    //experience
+    .experience {
+      margin-left: 7rem;
+      border-left: 2px $main-color solid;
+
+      i {
+        padding-left: 0.6rem;
+      }
+      div {
+        padding-left: 2rem;
+      }
+      li {
+        list-style: none;
+        display: list-item;
+      }
+
+      li:before {
+        content: "";
+        border: 8px $main-color solid !important;
+        border-radius: 50px;
+        margin-top: 35px;
+        margin-left: -33px;
+        position: absolute;
+      }
+      .text-ex-1,
+      .text-ex-2 {
+        border-bottom: 3px #333 dotted;
+      }
+    }
+
+    .lead-1 {
+      color: $main-color;
+      font-size: 2rem;
+
+      margin-top: 2rem;
+      margin-left: 3rem;
+      margin-bottom: 2rem;
+    }
+
+    //education
+    .edcation {
+      border-left: 2px $main-color solid;
+
+      i {
+        padding-left: 0.6rem;
+      }
+
+      div {
+        padding-left: 2rem;
+      }
+
+      li {
+        list-style: none;
+        display: list-item;
+      }
+
+      li:before {
+        content: "";
+        border: 8px $main-color solid !important;
+        border-radius: 50px;
+        margin-top: 35px;
+        margin-left: -33px;
+        position: absolute;
+      }
+      .text-ed-1,
+      .text-ed-2 {
+        border-bottom: 3px #333 dotted;
+      }
+    }
+  }
+}
+
+#contact {
+  &-a {
+    .text-fields {
+      display: grid;
+      grid-template-areas:
+        "name email"
+        "subject phone"
+        "message message";
+
+      grid-gap: 1.2rem;
+      margin-bottom: 1.2rem;
+
+      //grid-area
+      .name-input {
+        grid-area: name;
+      }
+      .subject-input {
+        grid-area: subject;
+      }
+      .email-input {
+        grid-area: email;
+      }
+      .phone-input {
+        grid-area: phone;
+      }
+      .message-input {
+        grid-area: message;
+        height: 100px;
+      }
+      .text-input {
+        padding: 0.5rem 1rem;
+      }
+      input,
+      textarea {
+        border-radius: 1rem;
+      }
+      ::placeholder {
+        color: $main-color;
+      }
+    }
+    button[type="submit"] {
+      width: 50%;
+      padding: 1rem;
+      border-radius: 1rem;
+      color: $main-color;
+    }
+  }
+  &-b {
+    .contact-info {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      text-align: center;
+
+      // border-top: 5px solid $main-color;
+      padding-top: 3rem;
+      p {
+        font-size: 1.2rem;
+      }
+      .div-1,
+      .div-2 {
+        border-left: $main-color dotted 5px;
+      }
+    }
+    .fas {
+      color: $main-color;
+      padding-bottom: 0.3rem;
+    }
+
+    .div-3 {
+      border-left: $main-color dotted 5px;
+      border-right: $main-color dotted 5px;
+    }
+  }
+}
+
+//footer
+#main-footer {
+  margin-top: 3rem;
+  border-top: 7px $main-color solid;
+  //   background-color: $dark-color;
+  color: $main-color;
+  height: 5rem;
+
+  .footer-content {
+    display: flex;
+    justify-content: space-between;
+    height: 12rem;
+
+    align-items: center;
+    p {
+      font-size: 1.5rem;
+    }
+  }
+  .social {
+    padding-top: 1rem;
+  }
+  .social .fab {
+    margin-right: 1rem;
+    border: 2px $main-color solid;
+    border-radius: 50%;
+    height: 20px;
+    width: 20px;
+    line-height: 20px;
+    text-align: center;
+    padding: 1rem;
+  }
+}
+
+@import "media";

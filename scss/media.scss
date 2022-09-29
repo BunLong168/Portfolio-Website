@@ -1,0 +1,166 @@
+//tablet & Smaller
+@media (max-width: 800px) {
+  #header {
+    &-home {
+      padding-top: 5rem;
+      .header-content {
+        h1,
+        span {
+          font-size: 3rem;
+        }
+        .lead {
+          padding-top: 6rem;
+        }
+      }
+    }
+  }
+
+  #main-footer {
+    height: 7rem;
+    .footer-content {
+      display: flex;
+      flex-direction: column;
+      padding: 3rem;
+      height: 7rem;
+    }
+    .social {
+      padding-left: 1rem;
+    }
+  }
+
+  #about-d {
+    .d-grid {
+      grid-template-columns: repeat(1, 1fr);
+      grid-gap: 3rem;
+    }
+    .experience {
+      margin-left: 0rem;
+    }
+  }
+}
+
+@media (max-width: 500px) {
+  #main-nav {
+    margin-bottom: 4rem;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+
+    li {
+      padding: 1rem;
+    }
+  }
+  #logo {
+    height: 90px;
+    width: 90px;
+    margin-bottom: 1rem;
+  }
+
+  #header-home {
+    .container {
+      margin: 0%;
+      padding: 0%;
+    }
+    .dotted {
+      border: none;
+    }
+    .header-content {
+      h1,
+      span {
+        font-size: 1.8rem;
+        padding-bottom: 1rem;
+      }
+      .hey-there {
+        font-size: 3.5rem;
+      }
+      .myname {
+        font-size: 3rem;
+      }
+      p,
+      span {
+        padding-bottom: 2rem;
+      }
+    }
+  }
+  .lead {
+    text-align: center;
+    border-top: 10px $main-color dotted;
+    margin-top: 5rem;
+  }
+  #main-footer {
+    height: 10rem;
+    .footer-content {
+      display: flex;
+      flex-direction: column;
+      padding: 3rem;
+      height: 9rem;
+      text-align: center;
+    }
+    .social {
+      padding-left: 1rem;
+    }
+  }
+  #about {
+    &-b {
+      .about-info {
+        grid-template-columns: repeat(1, 1fr);
+        .info-2 {
+          margin-left: 0rem;
+        }
+      }
+    }
+
+    &-d {
+      .edcation,
+      .experience {
+        i {
+          padding-left: 0rem;
+        }
+      }
+    }
+  }
+
+  #work {
+    &-a {
+      .items {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+      }
+      .item {
+        margin-bottom: 3rem;
+      }
+    }
+  }
+  #contact {
+    &-a {
+      .text-fields {
+        display: grid;
+        grid-template-areas:
+          "name"
+          "subject"
+          "email"
+          "phone"
+          "message";
+      }
+    }
+    &-b {
+      .contact-info {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        margin-top: 5rem;
+        border-top: 5px dotted $main-color;
+      }
+
+      .div-2 i,
+      .div-3 i {
+        margin-top: 3rem;
+      }
+      .div-1,
+      .div-2,
+      .div-3 {
+        border-left: $main-color dotted 5px;
+        border-right: $main-color dotted 5px;
+      }
+    }
+  }
+}
