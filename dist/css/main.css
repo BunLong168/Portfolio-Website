@@ -402,7 +402,7 @@ a {
       display: flex;
       flex-direction: column;
       padding: 3rem;
-      height: 9rem;
+      height: 10rem;
       text-align: center; }
     #main-footer .social {
       padding-left: 1rem; }
@@ -434,3 +434,10 @@ a {
   #contact-b .div-3 {
     border-left: #ff6a3d dotted 5px;
     border-right: #ff6a3d dotted 5px; } }
+
+@media (max-width: 580px) {
+  #about-b .about-info {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr); }
+    #about-b .about-info .info-2 {
+      margin-left: 0rem; } }
